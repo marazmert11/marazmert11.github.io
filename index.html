@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mert'ten İlayda'ya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(to bottom, #001f3f, #0074D9);
+      overflow: hidden;
+      position: relative;
+      color: #fff;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://i.ibb.co/QdVtTnF/dolphin-bg.png') no-repeat center center;
+      background-size: cover;
+      opacity: 0.2;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 50, 0.7);
+      margin: 5% auto;
+      padding: 60px 40px;
+      border-radius: 20px;
+      max-width: 800px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.3);
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 64px;
+      margin-bottom: 30px;
+      color: #a0e7ff;
+    }
+
+    p {
+      font-size: 26px;
+      line-height: 1.8;
+    }
+
+    .heart-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #ff4d6d;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 65px;
+      height: 65px;
+      font-size: 28px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      z-index: 3;
+      transition: transform 0.3s ease;
+    }
+
+    .heart-btn:hover {
+      transform: scale(1.2);
+    }
+
+    .message {
+      position: fixed;
+      bottom: 110px;
+      right: 30px;
+      background-color: rgba(0, 100, 80, 0.95);
+      padding: 20px 30px;
+      border-radius: 15px;
+      font-size: 20px;
+      display: none;
+      color: #e0ffe0;
+      max-width: 320px;
+      z-index: 3;
+      animation: fadein 1s ease-in-out;
+    }
+
+    @keyframes fadein {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>İlayda'ya</h1>
+    <p>
+      Dalga sesleriyle yazdım bu satırları,<br>
+      Kalbim, sahiline çarpan bir kıyı gibi.<br>
+      Gözlerin yeşil denizim, ruhumun limanı,<br>
+      Seni aşılıııı delecedeeeeee çok seviyom, canımın canı 💚
+    </p>
+  </div>
+
+  <button class="heart-btn" onclick="showMessage()">❤️</button>
+  <div class="message" id="msgBox">Seni aşılııı delecedeeeeee çok seviyom yeşil denizim 💚</div>
+
+  <script>
+    function showMessage() {
+      const msg = document.getElementById('msgBox');
+      msg.style.display = 'block';
+      setTimeout(() => {
+        msg.style.display = 'none';
+      }, 5000);
+    }
+  </script>
+</body>
+</html>
+
+
+
